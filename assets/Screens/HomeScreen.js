@@ -1,24 +1,21 @@
 import * as React from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import * as Font from 'expo-font';
-
-Font.loadAsync({
-    'main-bold': require('../fonts/main-bold.ttf')
-  });
-
+import LinearGradient from 'react-native-linear-gradient';
 
 function HomeScreen({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.Text}>Placeholder</Text>
+            <LinearGradient colors={['#0c2442', '#2d4c6a', '#4e7290']} style={styles.container}>
+                <Text style={styles.Text}>Placeholder</Text>
 
-            <TouchableOpacity style={styles.login} onPress={ () => navigation.navigate('Login') }>
-                <Text style={styles.loginText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.register} onPress={ () => navigation.navigate('Register') }>
-                <Text style={styles.registerText}>Register</Text>
-            </TouchableOpacity>
+                <TouchableOpacity style={styles.login} onPress={ () => navigation.navigate('Login') }>
+                    <Text style={styles.loginText}>Login</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.register} onPress={ () => navigation.navigate('Register') }>
+                    <Text style={styles.registerText}>Register</Text>
+                </TouchableOpacity>
+            </LinearGradient>
         </SafeAreaView>
     );
 }
@@ -26,10 +23,10 @@ function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000',
         alignItems: 'center',
         flex: 1,
         justifyContent: 'flex-start',
+        
     },
     Text: {
         color: '#fff',

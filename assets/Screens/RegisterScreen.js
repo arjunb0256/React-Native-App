@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import * as Font from 'expo-font';
-
-Font.loadAsync({
-    'main-bold': require('../fonts/main-bold.ttf')
-  });
-
 
 function RegisterScreen({ navigation }) {
     return (
