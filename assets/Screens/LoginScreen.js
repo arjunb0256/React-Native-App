@@ -8,16 +8,13 @@ Font.loadAsync({
   });
 
 
-function HomeScreen({ navigation }) {
+function LoginScreen({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.Text}>Placeholder</Text>
+            <Text style={styles.Text}>Login</Text>
 
-            <TouchableOpacity style={styles.login} onPress={ () => navigation.navigate('Login') }>
-                <Text style={styles.loginText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.register} onPress={ () => navigation.navigate('Register') }>
-                <Text style={styles.registerText}>Register</Text>
+            <TouchableOpacity style={styles.Back} onPress={ () => navigation.navigate('Home') }>
+                <Text style={styles.BackText}>Back</Text>
             </TouchableOpacity>
         </SafeAreaView>
     );
@@ -36,32 +33,19 @@ const styles = StyleSheet.create({
         fontSize: 50,
         marginTop: 50,
     },
-    login: {
+    Back: {
         alignItems: 'center',
         backgroundColor: '#DDDDDD',
         padding: 10,
         width: 300,
         height: 60,
         justifyContent: 'center',
-        marginTop: 460,
+        marginTop: 560,
         borderRadius: 10,
       },
-    loginText: {
-        fontSize: 20,
-    },
-    register: {
-        alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10,
-        width: 300,
-        height: 60,
-        justifyContent: 'center',
-        marginTop: 20,
-        borderRadius: 10,
-    },
-    registerText: {
+    BackText: {
         fontSize: 20,
     },
 });
 
-export default HomeScreen;
+export default LoginScreen;
