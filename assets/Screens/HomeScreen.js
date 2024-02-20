@@ -6,16 +6,14 @@ import LinearGradient from 'react-native-linear-gradient';
 function HomeScreen({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
-            <LinearGradient colors={['#0c2442', '#2d4c6a', '#4e7290']} style={styles.container}>
-                <Text style={styles.Text}>Placeholder</Text>
+            <Text style={styles.Text}>Placeholder</Text>
 
-                <TouchableOpacity style={styles.login} onPress={ () => navigation.navigate('Login') }>
-                    <Text style={styles.loginText}>Login</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.register} onPress={ () => navigation.navigate('Register') }>
-                    <Text style={styles.registerText}>Register</Text>
-                </TouchableOpacity>
-            </LinearGradient>
+            <TouchableOpacity style={styles.login} onPress={ () => navigation.navigate('Login') }>
+                <Text style={styles.loginText}>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.register} onPress={ () => navigation.navigate('Register') }>
+                <Text style={styles.registerText}>Register</Text>
+            </TouchableOpacity>
         </SafeAreaView>
     );
 }
