@@ -1,31 +1,31 @@
 import * as React from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, Button, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
 function LoginScreen({ navigation }) {
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+            <ImageBackground source={require('../images/HomeBackground.png')} style={{flex: 1, width: '100%'}}>
             <Text style={styles.Text}>Login</Text>
 
             <TouchableOpacity style={styles.Back} onPress={ () => navigation.navigate('Home') }>
                 <Text style={styles.BackText}>Back</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+            </ImageBackground>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000',
         alignItems: 'center',
-        flex: 1,
         justifyContent: 'flex-start',
     },
     Text: {
         color: '#fff',
         fontSize: 50,
-        marginTop: 50,
+        marginTop: 150,
+        marginLeft: 130,
     },
     Back: {
         alignItems: 'center',
@@ -34,8 +34,9 @@ const styles = StyleSheet.create({
         width: 300,
         height: 60,
         justifyContent: 'center',
-        marginTop: 560,
+        marginTop: 500,
         borderRadius: 10,
+        marginLeft: 40
       },
     BackText: {
         fontSize: 20,

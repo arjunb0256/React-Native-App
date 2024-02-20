@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import LinearGradient from 'react-native-linear-gradient';
 
 function HomeScreen({ navigation }) {
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+            <ImageBackground source={require('../images/HomeBackground.png')} style={{flex: 1, width: '100%'}}>
             <Text style={styles.Text}>Placeholder</Text>
 
             <TouchableOpacity style={styles.login} onPress={ () => navigation.navigate('Login') }>
@@ -14,7 +13,8 @@ function HomeScreen({ navigation }) {
             <TouchableOpacity style={styles.register} onPress={ () => navigation.navigate('Register') }>
                 <Text style={styles.registerText}>Register</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+            </ImageBackground>
+        </View>
     );
 }
 
@@ -22,14 +22,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        flex: 1,
         justifyContent: 'flex-start',
-        
     },
     Text: {
         color: '#fff',
         fontSize: 50,
-        marginTop: 50,
+        marginTop: 150,
+        marginLeft: 65,
     },
     login: {
         alignItems: 'center',
@@ -38,8 +37,9 @@ const styles = StyleSheet.create({
         width: 300,
         height: 60,
         justifyContent: 'center',
-        marginTop: 460,
+        marginTop: 400,
         borderRadius: 10,
+        marginLeft: 40,
       },
     loginText: {
         fontSize: 20,
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 20,
         borderRadius: 10,
+        marginLeft: 40,
     },
     registerText: {
         fontSize: 20,
